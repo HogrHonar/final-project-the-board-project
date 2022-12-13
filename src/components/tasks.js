@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import Pic1 from "./src/components/images/1.jpg";
-import Pic2 from "./src/components/images/2.jpg";
+import Pic1 from "./components/images/1.jpg";
+import Pic2 from "./components/images/2.jpg";
 
 export default function Tasks() {
   return(
