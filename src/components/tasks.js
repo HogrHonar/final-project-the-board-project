@@ -1,8 +1,30 @@
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import Pic1 from "../components/images/1.jpg";
 import Pic2 from "../components/images/2.jpg";
 
 export default function Tasks() {
+ const [show, setShow] = useState(false);
+ const [val1, setVal1] = useState("");
+ const [val2, setVal2] = useState("");
+ const [val3, setVal3] = useState("");
+
+ const change1= event =>{
+  setVal1(event.target.value);
+}
+const change2= event =>{
+ setVal2(event.target.value);
+}
+const change3= event =>{
+ setVal3(event.target.value);
+}
+
+ const submit= ()=>{
+   console.log(val1);
+   console.log(val2);
+   console.log(val3);
+ }
+
   return(
 
     <div className="w-full h-full bg-gray-900">
@@ -23,11 +45,38 @@ export default function Tasks() {
     <div className="w-4 h-4 rounded-full bg-black mt-2.5 ml-10 mr-5 shadow-lg shadow-white">
     </div>
     <p className="text-white text-2xl ">To-Do</p>
-    <i className="fa-solid fa-plus text-lg text-white ml-auto mr-7 "></i>
+    <button type="button" name="button" className="flex  ml-auto    " onClick={() => setShow(!show)}>
+    <i className="fa-solid fa-plus text-lg text-white  mr-7 "></i>
+    </button>
   </div>
   <div className="flex justify-center mt-5"><div className="w-80 h-0.5 center bg-white mb-5"></div></div>
 
-  <div className="flex justify-center ">
+  <div className="flex  flex-col items-center ">
+
+
+  { show && <div className="w-80 h-auto bg-black rounded-lg mb-10">
+    <p className="text-white text-xl mt-5 mb-5 ml-5">Task Name</p>
+    <div className="flex justify-center">
+    <input onChange={change1} vlaue={val1} type="text" id="large-input" className="block w-72 p-2 text-gray-900   rounded-full outline-none bg-gray-50 sm:text-md  dark:placeholder-gray-400 dark:text-white "></input>
+    </div>
+
+ <p className="text-white text-xl mt-5 mb-5 ml-5">Date</p>
+ <div className="flex justify-center">
+<input onChange={change2} vlaue={val2} type="text" id="large-input" className="block w-72 p-2 text-gray-900   rounded-full outline-none bg-gray-50 sm:text-md  dark:placeholder-gray-400 dark:text-white "></input>
+</div>
+
+<p className="text-white text-xl mt-5 mb-5 ml-5">Description</p>
+<div className="flex justify-center">
+<input  onChange={change3} vlaue={val3} type="text" id="large-input" className="block w-72 p-5 text-gray-900   rounded-full outline-none bg-gray-50 sm:text-md  dark:placeholder-gray-400 dark:text-white " ></input>
+</div>
+<div className="flex justify-center">
+  <button onClick={submit} type="button" name="button" className="flex  bg-emerald-900  mt-8 mb-8 py-2 px-6 rounded-full shadow-md shadow-white">
+  <p className="text-lg  text-white ">create</p>
+</button>
+</div>
+
+    </div>}
+
   <div className="w-80 h-auto bg-black rounded-lg mb-10">
   <p className="text-white text-xl mt-5 ml-3">Task Name</p>
   <p className="text-gray-500 text-md mt-1 ml-3">Dec.3.2022</p>
