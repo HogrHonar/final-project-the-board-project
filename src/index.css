@@ -15,3 +15,71 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App {
+  
+  height: 0px;
+  width: 100%;
+  display: block;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  position: absolute;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0 ;
+  padding: 0;
+  width: 270px;
+  height: 773px;
+  background-color:#085c3a;
+ 
+
+}
+
+li a {
+  display: block;
+  color: rgb(236, 225, 225);
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: #17c781;
+  color: #f1fdfa;
+}
+
+li a:hover:not(.active) {
+  background-color: #010e0b;
+  color: rgb(226, 225, 225);
+}
+
+.menu {
+  margin-right: 100px;
+}
+
+.login-page {
+  margin-left: 20%;
+}
+
+.menu {
+  padding-top: 30%;
+}
+
+.tasks {
+  padding-top: 30%;
+}
+
+.about {
+  padding-top: 30%;
+}
+
+.home {
+  padding-top: 30%;
+}
+
+.login1 {
+  padding-top: 30%;
+}
+
