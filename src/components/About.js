@@ -25,7 +25,7 @@ export default function About(){
             </p>
             <h2>Our Team</h2>
             <div className="team-details">
-                <Team image={roqayaamjad} githubLink="https://github.com/rokayaamjaad"  name="Roqaya Amjad"/>
+                <Team image={roqayaamjad} githubLink="https://github.com/rokayaamjaad"  name="Rokaya Amjad"/>
                 <Team image={hogerhonar} githubLink="https://github.com/HogrHonar"  name="Hogr Honar"/>
                 <Team image={daryanaji} githubLink="https://github.com/daryanaji"  name="Darya Naji"/>
                 <Team image={ramyaromed} githubLink="https://github.com/ramagitup"  name="Ramyar Omed"/>
