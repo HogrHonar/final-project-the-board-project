@@ -23,7 +23,7 @@ export default function Team({info}){
             <div className="w-1/2 h-1 bg-teal-900 my-4"></div>
             <p className="text-white">{info.dis}</p>
             <p className="text-white my-4">{info.bio}</p>
-            <div className="flex justify-evenly w-1/2 mb-4" >
+            <div className="flex justify-evenly w-3/5 mb-4" >
                 <div className="text-white w-full"> <a href={info.githubLink}><img src={github}></img></a></div>
                 <div className="text-white w-full"> <a href={info.linkedInLink}><img src={linkedin}></img></a></div>
                 <div className="text-white w-full"> <a href={info.facebook}><img src={fb}></img></a></div>
