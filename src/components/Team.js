@@ -9,7 +9,7 @@ export default function Team({info}){
     return ( 
         
        
-        <div className="w-1/2 border-2 rounded-2xl bg-black flex justify-center items-center flex-col shadow-white">
+        <div className=" border-2 rounded-2xl bg-black flex justify-center items-center flex-col shadow-white mb-7" style={{width:"30%"}}>
             {/* <img src={image} alt="team member"> Home Page</img>
             <link>{name}</link> */}
             <div className="border-1">

@@ -7,7 +7,7 @@ import ramyaromed from '../imgs/ramyaromed.PNG';
 
 export default function About(){
     return (
-        <div className="about-text bg-neutral-900 p-7">
+        <div className="about-text bg-neutral-900 p-10">
             <h1 className="text-white font-bold text-5xl p-3"> About Page</h1>
             <div className="w-1/5 h-1 bg-teal-900 my-7"></div>
             {/* <p className="text-white">'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
@@ -18,7 +18,7 @@ export default function About(){
                 
             </p> */}
             {/* <h2 className="text-white text-3xl font-bold">Our Team</h2> */}
-            <div className="flex flex-wrap">
+            <div className="flex flex-wrap justify-between">
            
                 <Team info={{image: hogerhonar, githubLink: "https://github.com/HogrHonar", name: "Hogr Honar",title:"Developer" , linkedInLink:"https://www.linkedin.com/in/hogr-honar/", dis: "Lorem ipsum is a placeholder text commonly."}} />
                 <Team info={{image: roqayaamjad, githubLink: "https://github.com/rokayaamjaad", name: "Rokaya Amjad",title:"Developer" , linkedInLink:"https://www.linkedin.com/in/rokaya-amjaad-shawki-708608231/", dis: "Lorem ipsum is a placeholder text commonly."}} />
