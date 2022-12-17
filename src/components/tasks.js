@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
+import { collection, addDoc } from "firebase/firestore";
+import db from "../../src/firebase.js";
 import Taskscard from "../components/taskscard.js";
 import Boardscard from "../components/boardscard.js";
 import { TasksArray } from "../components/taskArray.js";
@@ -25,11 +27,17 @@ export default function Tasks() {
 
 
 
-const create = (event) => {
+const create = async(event) => {
     event.preventDefault();
     setBoardList((prev) => {
       return [val,...prev];
-    })};
+    });
+    const docRef = await addDoc(collection(db, "boards"), {
+      ...val,
+    });
+
+
+  };
 
 
   return(

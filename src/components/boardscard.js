@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import Taskscard from "../components/taskscard.js";
 import { TasksArray } from "../components/taskArray.js";
 import { BoardArray } from "../components/boardArray.js";
+import { collection, addDoc } from "firebase/firestore";
+import db from "../../src/firebase.js";
 import Pic1 from "../components/images/1.jpg";
 import Pic2 from "../components/images/2.jpg";
 
@@ -20,13 +22,19 @@ const change= event =>{
 }
 
 
-console.log(val);
 
-const submit = (event) => {
+
+const submit =async(event) => {
   event.preventDefault();
   setTaskList((prev) => {
     return [val, ...prev];
-  })};
+
+  });
+  const docRef = await addDoc(collection(db, "tasks"), {
+    ...val,
+  });
+
+};
 
 
   return(
